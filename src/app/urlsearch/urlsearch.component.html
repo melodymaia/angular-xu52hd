@@ -1,0 +1,18 @@
+<form [formGroup]="urlForm" (ngSubmit)="onSubmit(urlForm.value)">
+
+    <div>
+    <label for="urlQuery">
+      URL Query
+    </label>
+    <input id="urlQuery" type="text" formControlName="urlQuery">
+  </div>
+
+  <button class="button" type="submit">Check URL</button>
+  <app-searchresults *ngIf="this.urlPresent == true"></app-searchresults>
+  <div *ngIf="this.urlPresent == false"><h3>URL is not owned by Mad Skills Consulting</h3></div>
+
+
+
+
+
+</form>
